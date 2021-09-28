@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+/* movie - list.component.ts */
+import { Component, OnInit, HostBinding } from '@angular/core';
+
+import { MoviesService } from '../../services/movies.service';
+
 
 @Component({
-  selector: 'app-movie-list',
-  templateUrl: './movie-list.component.html',
-  styleUrls: ['./movie-list.component.css']
+    selector: 'app-movie-list',
+    templateUrl: './movie-list.component.html',
+    styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }
