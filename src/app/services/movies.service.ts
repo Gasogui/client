@@ -22,7 +22,7 @@ export class MoviesService {
         return this.http.get(`${this.API_URI}/movies/${id}`);
     }
 
-    //get add movie
+    //add movie
     saveMovie(movie: Movie) {
         return this.http.post(`${this.API_URI}/movies`, movie);
     }

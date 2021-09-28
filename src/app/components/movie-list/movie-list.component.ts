@@ -2,7 +2,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 
 import { MoviesService } from '../../services/movies.service';
-
+import { Movie } from 'src/app/models/Movie'
 
 @Component({
     selector: 'app-movie-list',
@@ -11,9 +11,14 @@ import { MoviesService } from '../../services/movies.service';
 })
 export class MovieListComponent implements OnInit {
 
-    constructor() { }
+    constructor(private movieService: MoviesService) { }
 
     ngOnInit(): void {
+        this.movieService.getMovies().subscribe(
+            res => console.log(res),
+            err => console.log(err)
+        );
+
     }
 
 }
