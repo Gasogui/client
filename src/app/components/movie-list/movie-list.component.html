@@ -1,1 +1,36 @@
-<p>movie-list works!</p>
+<!-- movie-list.component.html -->
+<p>LISTA DE PELÍCULAS</p>
+<button type="button" class="btn btn-dark" routerLink="/movies/add" routerLinkActive="active">Agregar</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Título</th>
+            <th scope="col">Año</th>
+            <th scope="col">Duración</th>
+            <th scope="col">Idioma</th>
+            <th scope="col">Estreno</th>
+            <th scope="col">País</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of lisMovies">
+            <td>{{movie.mov_id}}</td>
+            <td>{{movie.mov_title}}</td>
+            <td>{{movie.mov_year}}</td>
+            <td>{{movie.mov_time}}</td>
+            <td>{{movie.mov_lang}}</td>
+            <td>{{movie.mov_dt_rel | date: 'dd-mm-yyyy'}}</td>
+            <td>{{movie.mov_rel_country}}</td>
+            <td>
+                <button (click)="updateMovie(movie.mov_id)" type="button" class="btn btn-primary">Editar</button>
+            </td>
+            <td>
+                <button (click)="deleteMovie(movie.mov_id)" type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

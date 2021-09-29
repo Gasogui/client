@@ -9,7 +9,7 @@ import { MovieEditComponent } from './components/movie-edit/movie-edit.component
 const routes: Routes = [
 
     {
-        path: '',
+        path: ' ',
         redirectTo: '/movies',
         pathMatch: 'full'
     },
