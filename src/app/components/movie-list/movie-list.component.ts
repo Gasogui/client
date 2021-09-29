@@ -11,11 +11,15 @@ import { Movie } from 'src/app/models/Movie'
 })
 export class MovieListComponent implements OnInit {
 
+    games: any = [];
+
     constructor(private movieService: MoviesService) { }
 
     ngOnInit(): void {
         this.movieService.getMovies().subscribe(
-            res => console.log(res),
+            res => {
+                this.games = res;
+            },
             err => console.log(err)
         );
 
