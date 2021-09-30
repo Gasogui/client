@@ -17,7 +17,7 @@ export class MovieListComponent implements OnInit {
     constructor(
         private movieService: MoviesService,
         private router: Router
-    gui) { }
+    ) { }
 
     ngOnInit(): void {
         this.getMovies();
