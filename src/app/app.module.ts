@@ -17,8 +17,8 @@ import { MoviesService } from './services/movies.service';
     declarations: [
         AppComponent,
         NavigationComponent,
-        MovieFormComponent,
         MovieListComponent,
+        MovieFormComponent,
         MovieEditComponent
     ],
     imports: [
