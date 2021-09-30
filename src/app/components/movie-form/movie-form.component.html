@@ -1,72 +1,44 @@
-<div class="container ">
+<!-- movie-form.component.html -->
+<p>AGREGAR PELÍCULA</p>
 
-    <p>AGREGAR PELÍCULA</p>
+<form class="row g-3">
 
-    <form class="row g-3">
-
-        <div class="col-auto">
-            <label for="inputCode" class="form-label">Código</label>
-            <input type="text" class="form-control" id="inputCode">
-        </div>
-
-
-        <div class="col-md-10">
-            <label for="inputTitle" class="form-label">Título</label>
-            <input type="text" class="form-control" id="inputTitle">
-        </div>
-
-        <div class="col-md-3">
-            <label for="inputTitle" class="form-label">Año</label>
-            <input type="text" class="form-control" id="inputTitle">
-        </div>
-        <div class="col-md-3">
-            <label for="inputTitle" class="form-label">Duración</label>
-            <input type="text" class="form-control" id="inputTitle">
-        </div>
-        <div class="col-md-4">
-            <label for="inputTitle" class="form-label">Idioma</label>
-            <input type="text" class="form-control" id="inputTitle">
-        </div>
-
-        <div class="col-md-3">
-            <label for="inputTitle" class="form-label">Estreno</label>
-            <input type="text" class="form-control" id="inputTitle">
-        </div>
-        <div class="col-md-3">
-            <label for="inputTitle" class="form-label">País</label>
-            <input type="text" class="form-control" id="inputTitle">
-        </div>
-
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary">Guardar</button>
-        </div>
-    </form>
-
-</div>
-
-
-
-
-
-
-
-<!-- <div class="container">
-    <p>AGREGAR EQUIPO</p>
-    <div class="row">
-        <div class="col-sm-6">
-            <form>
-                <div class="mb-3">
-                    <label class="form-label">Nombre de Equipo</label>
-                    <input type="text" class="form-control" name=" ">
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">logo</label>
-                    <input type="text" class="form-control" name=" ">
-                </div>
-
-                <button class="btn btn-primary">Agregar</button>
-            </form>
-        </div>
+    <div class="col-auto">
+        <label for="inputCode" class="form-label">Código</label>
+        <input [(ngModel)]="movie.mov_id" type="text" class="form-control" id="inputCode" name="mov_id" autofocus>
     </div>
-</div> -->
+
+
+    <div class="col-md-10">
+        <label for="inputTitle" class="form-label">Título</label>
+        <input [(ngModel)]="movie.mov_title" type="text" class="form-control" id="inputTitle" name="mov_title">
+    </div>
+
+    <div class="col-md-3">
+        <label for="inputYear" class="form-label">Año</label>
+        <input [(ngModel)]="movie.mov_year" type="text" class="form-control" id="inputYear" name="mov_year">
+    </div>
+    <div class="col-md-3">
+        <label for="inputTitle" class="form-label">Duración</label>
+        <input [(ngModel)]="movie.mov_time" type="text" class="form-control" id="inputTitle" name="mov_time">
+    </div>
+    <div class="col-md-4">
+        <label for="inputDuration" class="form-label">Idioma</label>
+        <input [(ngModel)]="movie.mov_lang" type="text" class="form-control" id="inputDuration" name="mov_lang">
+    </div>
+
+    <div class="col-md-3">
+        <label for="inputPremiere" class="form-label">Estreno</label>
+        <input [(ngModel)]="movie.mov_dt_rel" type="date" class="form-control" id="inputPremiere" name="mov_dt_re"
+            placeholder="dd-mm-yyyy">
+    </div>
+    <div class="col-md-3">
+        <label for="inputCountry" class="form-label">País</label>
+        <input [(ngModel)]="movie.mov_rel_country" type="text" class="form-control" id="inputCountry"
+            name="mov_rel_country">
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary" (click)="saveNewMovie()">Agregar</button>
+    </div>
+</form>
