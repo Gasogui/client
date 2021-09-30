@@ -14,7 +14,10 @@ export class MovieListComponent implements OnInit {
 
     lisMovies: any = [];
 
-    constructor(private movieService: MoviesService, private router: Router) { }
+    constructor(
+        private movieService: MoviesService,
+        private router: Router
+    gui) { }
 
     ngOnInit(): void {
         this.getMovies();
@@ -47,9 +50,4 @@ export class MovieListComponent implements OnInit {
     updateMovie(id: string) {
         this.router.navigate([`/edit/${id}`]);
     }
-
-
-
-
-
 }
